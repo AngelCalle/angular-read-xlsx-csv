@@ -1,0 +1,31 @@
+
+<p>
+	Reads csv and xlsx files, and returns a list of key values depending on the
+	ones indicated
+</p>
+
+<button
+	id="import"
+	name="import"
+	type="button"
+	(click)="uploadFile()">
+	Cargar
+</button>
+
+<div *ngIf="xlsxValues">
+	<h3>
+		Values .xlsx
+	</h3>
+	<p>
+		{{ xlsxValues | json }}
+	</p>
+</div>
+
+<div *ngIf="csvValues">
+	<h3>
+		Values .csv
+	</h3>
+	<p>
+		{{ csvValues |json }}
+	</p>
+</div>
